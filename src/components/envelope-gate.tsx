@@ -3,9 +3,10 @@
 type EnvelopeGateProps = {
   isOpening: boolean;
   onOpen: () => void;
+  guestName: string;
 };
 
-export function EnvelopeGate({ isOpening, onOpen }: EnvelopeGateProps) {
+export function EnvelopeGate({ isOpening, onOpen, guestName }: EnvelopeGateProps) {
   return (
     <section
       className={`envelope-screen ${isOpening ? "is-opening" : ""}`}
@@ -17,9 +18,9 @@ export function EnvelopeGate({ isOpening, onOpen }: EnvelopeGateProps) {
         <div className={`envelope-shell ${isOpening ? "is-opening" : ""}`} aria-hidden="true">
           <div className="envelope-back" />
           <div className="envelope-letter">
-            <p className="envelope-letter-kicker">Bismillah</p>
-            <h2 className="envelope-letter-title">Azzalea & Aiman</h2>
-            <p className="envelope-letter-copy">You are warmly invited to our Nikah celebration.</p>
+            <h2 className="envelope-letter-title">{guestName}</h2>
+            {/* <h2 className="envelope-letter-title">Azzalea & Aiman</h2> */}
+            <p className="envelope-letter-copy">You are warmly invited to our Nikah</p>
           </div>
           <div className="envelope-flap" />
         </div>
@@ -28,7 +29,6 @@ export function EnvelopeGate({ isOpening, onOpen }: EnvelopeGateProps) {
           <button type="button" className="envelope-open-btn" onClick={onOpen} disabled={isOpening}>
             {isOpening ? "Opening..." : "Open Envelope"}
           </button>
-          <p className="envelope-hint">Tap to unveil the invitation</p>
         </div>
       </div>
     </section>

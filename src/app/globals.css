@@ -197,7 +197,9 @@ h4 {
 .envelope-letter-title {
   margin: 0.4rem 0 0;
   font-size: clamp(1.55rem, 3vw, 2.05rem);
-  color: var(--text-strong);
+  /* color: var(--text-strong); */
+  text-transform: uppercase;
+  color: var(--teal-700);
 }
 
 .envelope-letter-copy {

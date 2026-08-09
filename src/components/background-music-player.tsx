@@ -6,7 +6,6 @@ type BackgroundMusicPlayerProps = {
   src: string;
   defaultVolume?: number;
   isVisible?: boolean;
-  shouldAttemptAutoPlay?: boolean;
 };
 
 export type BackgroundMusicPlayerHandle = {
@@ -14,7 +13,7 @@ export type BackgroundMusicPlayerHandle = {
 };
 
 export const BackgroundMusicPlayer = forwardRef<BackgroundMusicPlayerHandle, BackgroundMusicPlayerProps>(function BackgroundMusicPlayer(
-  { src, defaultVolume = 0.5, isVisible = true, shouldAttemptAutoPlay = false },
+  { src, defaultVolume = 0.5, isVisible = true },
   ref,
 ) {
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -46,39 +45,6 @@ export const BackgroundMusicPlayer = forwardRef<BackgroundMusicPlayerHandle, Bac
 
     audio.volume = defaultVolume;
   }, [defaultVolume]);
-
-  useEffect(() => {
-    if (!shouldAttemptAutoPlay) {
-      return;
-    }
-
-    void playAudio();
-  }, [playAudio, shouldAttemptAutoPlay]);
-
-  useEffect(() => {
-    const handleFirstInteraction = () => {
-      const audio = audioRef.current;
-
-      if (!audio || !audio.paused) {
-        return;
-      }
-
-      void playAudio();
-      window.removeEventListener("pointerdown", handleFirstInteraction);
-      window.removeEventListener("keydown", handleFirstInteraction);
-      window.removeEventListener("touchstart", handleFirstInteraction);
-    };
-
-    window.addEventListener("pointerdown", handleFirstInteraction);
-    window.addEventListener("keydown", handleFirstInteraction);
-    window.addEventListener("touchstart", handleFirstInteraction);
-
-    return () => {
-      window.removeEventListener("pointerdown", handleFirstInteraction);
-      window.removeEventListener("keydown", handleFirstInteraction);
-      window.removeEventListener("touchstart", handleFirstInteraction);
-    };
-  }, [playAudio]);
 
   useImperativeHandle(ref, () => ({
     play: playAudio,
