@@ -1,7 +1,6 @@
 "use client";
 
-import { ReactNode, useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { ReactNode, useEffect, useState } from "react";
 import { EnvelopeGate } from "@/components/envelope-gate";
 import { resolveGuestByCode } from "@/content/guest-codes";
 
@@ -15,12 +14,16 @@ const ENVELOPE_REVEAL_DELAY_MS = 1250;
 export function InviteGateController({ children, onOpen }: InviteGateControllerProps) {
   const [isOpened, setIsOpened] = useState(false);
   const [isOpening, setIsOpening] = useState(false);
-  const searchParams = useSearchParams();
+  const [guestName, setGuestName] = useState("Dear Guest");
 
-  const guestName = useMemo(() => {
-    const matchedGuest = resolveGuestByCode(searchParams.get("code"));
-    return matchedGuest?.displayName ?? "Dear Guest";
-  }, [searchParams]);
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const matchedGuest = resolveGuestByCode(params.get("code"));
+
+    if (matchedGuest?.displayName) {
+      setGuestName(matchedGuest.displayName);
+    }
+  }, []);
 
   const handleOpen = () => {
     if (isOpening || isOpened) {
