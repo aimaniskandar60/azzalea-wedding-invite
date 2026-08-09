@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Noto_Naskh_Arabic, Source_Sans_3 } from "next/font/google";
+import { InviteGateController } from "@/components/invite-gate-controller";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
@@ -37,9 +38,11 @@ export default function RootLayout({
       className={`${titleFont.variable} ${bodyFont.variable} ${arabicFont.variable} h-full scroll-smooth antialiased`}
     >
       <body className="flex min-h-full flex-col bg-[var(--bg-base)] text-[var(--text-strong)]">
-        <SiteHeader />
-        {children}
-        <SiteFooter />
+        <InviteGateController>
+          <SiteHeader />
+          {children}
+          <SiteFooter />
+        </InviteGateController>
       </body>
     </html>
   );
