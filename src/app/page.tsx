@@ -1,6 +1,9 @@
 import { RsvpForm } from "@/components/rsvp-form";
+import { BackgroundMusicPlayer } from "@/components/background-music-player";
 import { rsvpConfig } from "@/content/rsvp-config";
 import { siteContent } from "@/content/site-content";
+
+const BACKGROUND_MUSIC_MP3_URL = "/audio/the-way-i-loved-you-michal-leah-original-key-karaoke-piano-instrumental-cover_nfqdWXEw.mp3";
 
 export default function Home() {
   const event = siteContent.events[0];
@@ -18,6 +21,8 @@ export default function Home() {
 
   return (
     <main>
+      <BackgroundMusicPlayer src={BACKGROUND_MUSIC_MP3_URL} />
+
       <section id="hero" className="relative isolate overflow-hidden border-b border-[var(--border-soft)] bg-[var(--bg-soft)]">
         <div
           aria-hidden="true"

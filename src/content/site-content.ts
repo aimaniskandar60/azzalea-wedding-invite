@@ -80,14 +80,14 @@ export const siteContent: SiteContent = {
       title: "Nikah Ceremony",
       date: "Saturday, September 8, 2028",
       venue: "Azzalea's House",
-      address: "123 Jalan Example, Kuala Lumpur",
-      mapsUrl: "https://maps.google.com/?q=123+Jalan+Example,+Kuala+Lumpur",
-      calendarUrl:
-        "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nikah+-+Azzalea+%26+Aiman&dates=20280908T030000Z/20280908T050000Z&details=Join+us+to+celebrate+our+Nikah.&location=123+Jalan+Example,+Kuala+Lumpur",
+      address: "9, Jalan Rimba Riang 9/2, Kota Damansara, 47810 Petaling Jaya, Selangor",
+      mapsUrl: "https://maps.app.goo.gl/wT6KUMCr7Ksugmm19",
+      calendarUrl:"https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nikah+-+Azzalea+%26+Aiman&dates=20280908T030000Z/20280908T050000Z&details=Join+us+to+celebrate+our+Nikah.&location=9,+Jalan+Rimba+Riang+9/2,+Kota+Damansara,+47810+Petaling+Jaya,+Selangor&sf=true&output=xml",
+      // I think we're doing it at night?
       schedule: [
         { label: "Guest Arrival", time: "10:30 AM" },
         { label: "Nikah", time: "11:00 AM" },
-        { label: "Dua & Greetings", time: "12:00 PM" },
+        { label: "Makan-makan", time: "12:00 PM" },
       ],
     },
   ],
