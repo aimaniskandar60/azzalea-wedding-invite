@@ -1,13 +1,13 @@
-const formId = "1FAIpQLSfl5mE2mJtIYQ5ukYDPnrwsTbpcil0MQtGU1UXeFZXZdBXmaQ";
+const formId = "1FAIpQLSfJ8JEkst8r0qs3oql7weGsh84D29gIOojqqj-xqGIADHBicg";
 const formViewUrl = `https://docs.google.com/forms/d/e/${formId}/viewform`;
 
 export const rsvpConfig = {
   formId,
   formViewUrl,
   entries: {
-    guestName: "184835722",
+    guestName: "1498135098",
     attendance: "877086558",
-    guests: "1498135098",
+    guests: "1424661284",
   },
   defaults: {
     guestName: "",
