@@ -40,18 +40,18 @@ export type SiteContent = {
 export const siteContent: SiteContent = {
   couple: {
     bride: {
-      name: "Azzalea",
+      name: "Noorazzalea binti Gazali",
       relationLabel: "daughter of",
       parents: "Gazali bin Abdul Rahman & Noorshida binti Hashim",
     },
     groom: {
-      name: "Aiman",
+      name: "Aiman Iskandar bin Murhiz",
       relationLabel: "son of",
       parents: "Murhiz bin Mohd Nor & Anita binti Osman",
     },
   },
-  introLine: "With gratitude to Allah, we invite you to celebrate the Nikah of",
-  tagline: "Join us for a day of love, faith, and togetherness.",
+  introLine: "With gratitude to Allah S.W.T., we invite you to the wedding of our daughter",
+  tagline: "Join us for a day of love, celebration, and togetherness.",
   rsvpDeadline: "TBD",
   contacts: [
     {
@@ -77,17 +77,16 @@ export const siteContent: SiteContent = {
   ],
   events: [
     {
-      title: "Nikah Ceremony",
-      date: "Saturday, September 8, 2028",
-      venue: "Azzalea's House",
-      address: "9, Jalan Rimba Riang 9/2, Kota Damansara, 47810 Petaling Jaya, Selangor",
-      mapsUrl: "https://maps.app.goo.gl/wT6KUMCr7Ksugmm19",
-      calendarUrl:"https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nikah+-+Azzalea+%26+Aiman&dates=20280908T030000Z/20280908T050000Z&details=Join+us+to+celebrate+our+Nikah.&location=9,+Jalan+Rimba+Riang+9/2,+Kota+Damansara,+47810+Petaling+Jaya,+Selangor&sf=true&output=xml",
-      // I think we're doing it at night?
+      title: "Wedding Ceremony",
+      date: "TBD 2028",
+      venue: "Wedding Venue",
+      address: "TBD",
+      mapsUrl: "",
+      calendarUrl:"https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+-+Azzalea+%26+Aiman&dates=20280908T030000Z/20280908T050000Z&details=Join+us+to+celebrate+our+Nikah.&location=9,+Jalan+Rimba+Riang+9/2,+Kota+Damansara,+47810+Petaling+Jaya,+Selangor&sf=true&output=xml",
       schedule: [
         { label: "Guest Arrival", time: "10:30 AM" },
-        { label: "Nikah", time: "11:00 AM" },
-        { label: "Makan-makan", time: "12:00 PM" },
+        { label: "Bride and Groom Arrival", time: "12:00 PM" },
+        { label: "End of Ceremony", time: "4:00 PM" },
       ],
     },
   ],

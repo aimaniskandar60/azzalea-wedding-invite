@@ -33,7 +33,7 @@ export default function Home() {
   if (!event) {
     return (
       <main className="mx-auto w-full max-w-5xl px-4 py-16 sm:px-6">
-        <h1 className="text-4xl font-semibold text-stone-900">Nikah Invitation</h1>
+        <h1 className="text-4xl font-semibold text-stone-900">Wedding Invitation</h1>
         <p className="mt-3 text-stone-700">Event details will be added soon.</p>
       </main>
     );
@@ -51,29 +51,29 @@ export default function Home() {
         <section id="hero" className="relative isolate overflow-hidden border-b border-[var(--border-soft)] bg-[var(--bg-soft)]">
           <div
             aria-hidden="true"
-            className="hero-hue-primary pointer-events-none z-0 opacity-95 bg-[linear-gradient(180deg,var(--bg-soft)_0%,var(--bg-base)_100%),radial-gradient(circle_at_14%_18%,color-mix(in_oklab,var(--teal-500)_52%,white)_0%,transparent_58%),radial-gradient(circle_at_86%_24%,color-mix(in_oklab,var(--purple-500)_50%,white)_0%,transparent_56%)]"
+            className="hero-hue-primary pointer-events-none z-0 opacity-95 bg-[linear-gradient(180deg,var(--bg-soft)_0%,var(--bg-base)_100%),radial-gradient(circle_at_14%_18%,color-mix(in_oklab,var(--teal-500)_52%,white)_0%,transparent_58%),radial-gradient(circle_at_86%_24%,color-mix(in_oklab,var(--blue-500)_50%,white)_0%,transparent_56%)]"
           />
           <div
             aria-hidden="true"
-            className="hero-hue-secondary pointer-events-none z-0 opacity-72 bg-[radial-gradient(circle_at_18%_78%,color-mix(in_oklab,var(--teal-200)_78%,white)_0%,transparent_52%),radial-gradient(circle_at_82%_12%,color-mix(in_oklab,var(--purple-200)_76%,white)_0%,transparent_50%)]"
+            className="hero-hue-secondary pointer-events-none z-0 opacity-72 bg-[radial-gradient(circle_at_18%_78%,color-mix(in_oklab,var(--teal-200)_78%,white)_0%,transparent_52%),radial-gradient(circle_at_82%_12%,color-mix(in_oklab,var(--blue-200)_76%,white)_0%,transparent_50%)]"
           />
           <div className="relative z-10 mx-auto w-full max-w-5xl px-4 py-20 text-center sm:px-6 sm:py-24">
             <p className="font-arabic text-2xl text-[var(--teal-700)] sm:text-3xl">
               السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ
             </p>
-            <p className="mx-auto mt-5 max-w-3xl text-base text-[var(--text-muted)] sm:text-lg">{siteContent.introLine}</p>
+            <p className="mx-auto mt-6 max-w-4xl font-[family-name:var(--font-title)] text-2xl leading-relaxed text-[var(--text-strong)] sm:text-3xl">
+              {bride.parents}
+            </p>
+            <p className="mx-auto mt-4 max-w-3xl text-base text-[var(--text-muted)] sm:text-lg">{siteContent.introLine}</p>
             <h1 className="mt-8 text-5xl font-semibold leading-tight text-[var(--foreground)] sm:text-7xl">
-              <span className="block">{bride.name}</span>
+              <span className="font-couple block font-normal">{bride.name}</span>
+              <span className="font-couple mx-auto mt-6 block font-normal" aria-hidden="true">&</span>
+              <span className="font-couple mt-6 block font-normal">{groom.name}</span>
               <span className="mt-2 block font-sans text-sm text-[var(--text-muted)] sm:text-base">
-                <span className="tracking-[0.02em]">{bride.relationLabel} {bride.parents}</span>
-              </span>
-              <span className="mx-auto mt-6 block" aria-hidden="true">&</span>
-              <span className="mt-6 block">{groom.name}</span>
-              <span className="mt-2 block font-sans text-sm text-[var(--text-muted)] sm:text-base">
-                <span className="tracking-[0.02em]">{groom.relationLabel} {groom.parents}</span>
+                {/* <span className="tracking-[0.02em]">{groom.relationLabel} {groom.parents}</span> */}
               </span>
             </h1>
-            <p className="mt-5 text-lg text-[var(--purple-700)] sm:text-xl">{event.date}</p>
+            <p className="mt-5 text-lg text-[var(--blue-700)] sm:text-xl">{event.date}</p>
             <p className="mx-auto mt-8 max-w-2xl text-base text-[var(--text-muted)] sm:text-lg">{siteContent.tagline}</p>
           </div>
         </section>
@@ -107,7 +107,7 @@ export default function Home() {
                     href={event.calendarUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-[var(--purple-700)] px-4 py-2 text-sm font-medium text-white transition hover:bg-[var(--purple-500)]"
+                    className="inline-flex items-center gap-2 rounded-full bg-[var(--blue-700)] px-4 py-2 text-sm font-medium text-white transition hover:bg-[var(--blue-500)]"
                   >
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                       <rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" />
@@ -127,7 +127,7 @@ export default function Home() {
                     className="flex items-center justify-between rounded-xl border border-[var(--border-soft)] bg-[var(--surface-subtle)] px-4 py-3"
                   >
                     <span className="text-[var(--text-muted)]">{item.label}</span>
-                    <span className="font-semibold text-[var(--purple-700)]">{item.time}</span>
+                    <span className="font-semibold text-[var(--blue-700)]">{item.time}</span>
                   </li>
                 ))}
               </ul>
@@ -139,7 +139,7 @@ export default function Home() {
       <RevealOnScroll>
         <section
           id="rsvp"
-          className="bg-[radial-gradient(circle_at_90%_18%,var(--purple-50)_0%,transparent_36%),radial-gradient(circle_at_8%_80%,var(--teal-50)_0%,transparent_34%),var(--bg-base)]"
+          className="bg-[radial-gradient(circle_at_90%_18%,var(--blue-50)_0%,transparent_36%),radial-gradient(circle_at_8%_80%,var(--teal-50)_0%,transparent_34%),var(--bg-base)]"
         >
           <div className="mx-auto w-full max-w-5xl px-4 py-14 sm:px-6 sm:py-16">
             <h2 className="text-4xl font-semibold text-[var(--text-strong)] sm:text-5xl">RSVP</h2>

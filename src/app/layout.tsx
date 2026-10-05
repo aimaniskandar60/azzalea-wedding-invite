@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Noto_Naskh_Arabic, Source_Sans_3 } from "next/font/google";
+import { Cormorant_Garamond, Noto_Naskh_Arabic, Parisienne, Source_Sans_3 } from "next/font/google";
 import { InviteGateController } from "@/components/invite-gate-controller";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -9,6 +9,12 @@ const titleFont = Cormorant_Garamond({
   variable: "--font-title",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+});
+
+const coupleFont = Parisienne({
+  variable: "--font-couple",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 const bodyFont = Source_Sans_3({
@@ -35,7 +41,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${titleFont.variable} ${bodyFont.variable} ${arabicFont.variable} h-full scroll-smooth antialiased`}
+      className={`${titleFont.variable} ${coupleFont.variable} ${bodyFont.variable} ${arabicFont.variable} h-full scroll-smooth antialiased`}
     >
       <body className="flex min-h-full flex-col bg-[var(--bg-base)] text-[var(--text-strong)]">
         <InviteGateController>

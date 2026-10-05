@@ -14,10 +14,10 @@
   --teal-200: #a8ddd8;
   --teal-500: #2faea7;
   --teal-700: #1f7e79;
-  --purple-50: #f1ecf9;
-  --purple-200: #cfbee8;
-  --purple-500: #7e63b5;
-  --purple-700: #5b438d;
+  --blue-50: #edf4fc;
+  --blue-200: #c3d5eb;
+  --blue-500: #4c73a3;
+  --blue-700: #345b8c;
 }
 
 @theme inline {
@@ -42,6 +42,10 @@ h4 {
 
 .font-arabic {
   font-family: var(--font-arabic), serif;
+}
+
+.font-couple {
+  font-family: var(--font-couple), cursive;
 }
 
 @keyframes heroHueDriftPrimary {
@@ -134,7 +138,7 @@ h4 {
   padding: 1.5rem;
   background:
     radial-gradient(circle at 18% 20%, color-mix(in oklab, var(--teal-200) 60%, white) 0%, transparent 42%),
-    radial-gradient(circle at 84% 22%, color-mix(in oklab, var(--purple-200) 60%, white) 0%, transparent 44%),
+    radial-gradient(circle at 84% 22%, color-mix(in oklab, var(--blue-200) 60%, white) 0%, transparent 44%),
     linear-gradient(180deg, var(--bg-soft) 0%, var(--bg-base) 100%);
   transition: opacity 700ms ease, visibility 700ms ease;
 }
@@ -154,7 +158,7 @@ h4 {
   inset: auto 10% -24px;
   height: 56px;
   border-radius: 999px;
-  background: radial-gradient(ellipse at center, color-mix(in oklab, var(--purple-200) 65%, transparent) 0%, transparent 72%);
+  background: radial-gradient(ellipse at center, color-mix(in oklab, var(--blue-200) 65%, transparent) 0%, transparent 72%);
   filter: blur(10px);
 }
 
@@ -163,14 +167,14 @@ h4 {
   overflow: hidden;
   border-radius: 1.25rem;
   border: 1px solid var(--border-soft);
-  box-shadow: 0 20px 45px -34px color-mix(in oklab, var(--purple-500) 45%, transparent);
+  box-shadow: 0 20px 45px -34px color-mix(in oklab, var(--blue-500) 45%, transparent);
   transform-origin: center bottom;
 }
 
 .envelope-back {
   position: absolute;
   inset: 0;
-  background: linear-gradient(145deg, color-mix(in oklab, var(--teal-50) 78%, white) 0%, color-mix(in oklab, var(--purple-50) 76%, white) 100%);
+  background: linear-gradient(145deg, color-mix(in oklab, var(--teal-50) 78%, white) 0%, color-mix(in oklab, var(--blue-50) 76%, white) 100%);
 }
 
 .envelope-letter {
@@ -181,7 +185,7 @@ h4 {
   background: color-mix(in oklab, var(--surface) 92%, var(--bg-soft));
   padding: 1.8rem 1.3rem 1.4rem;
   text-align: center;
-  box-shadow: 0 14px 30px -22px color-mix(in oklab, var(--purple-500) 45%, transparent);
+  box-shadow: 0 14px 30px -22px color-mix(in oklab, var(--blue-500) 45%, transparent);
   transform: translateY(16%);
   transition: transform 880ms cubic-bezier(0.22, 0.86, 0.29, 1), opacity 500ms ease;
 }
@@ -210,7 +214,7 @@ h4 {
 .envelope-flap {
   position: relative;
   height: 170px;
-  background: linear-gradient(145deg, color-mix(in oklab, var(--teal-200) 70%, white) 0%, color-mix(in oklab, var(--purple-200) 68%, white) 100%);
+  background: linear-gradient(145deg, color-mix(in oklab, var(--teal-200) 70%, white) 0%, color-mix(in oklab, var(--blue-200) 68%, white) 100%);
   clip-path: polygon(0 0, 50% 82%, 100% 0, 100% 100%, 0 100%);
   transform-origin: top;
   transition: transform 860ms cubic-bezier(0.22, 0.86, 0.29, 1);
@@ -230,9 +234,9 @@ h4 {
 }
 
 .envelope-open-btn {
-  border: 1px solid color-mix(in oklab, var(--purple-200) 70%, white);
+  border: 1px solid color-mix(in oklab, var(--blue-200) 70%, white);
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--teal-700), var(--purple-700));
+  background: linear-gradient(135deg, var(--teal-700), var(--blue-700));
   color: white;
   padding: 0.72rem 1.45rem;
   font-size: 0.9rem;
@@ -246,9 +250,9 @@ h4 {
 .envelope-open-btn:focus-visible {
   transform: translateY(-1px);
   box-shadow:
-    0 0 0 1px color-mix(in oklab, var(--purple-500) 65%, white),
-    0 0 0 5px color-mix(in oklab, var(--purple-200) 44%, transparent),
-    0 10px 20px -14px color-mix(in oklab, var(--purple-500) 60%, transparent);
+    0 0 0 1px color-mix(in oklab, var(--blue-500) 65%, white),
+    0 0 0 5px color-mix(in oklab, var(--blue-200) 44%, transparent),
+    0 10px 20px -14px color-mix(in oklab, var(--blue-500) 60%, transparent);
 }
 
 .envelope-open-btn:disabled {

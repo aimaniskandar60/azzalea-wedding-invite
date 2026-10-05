@@ -79,13 +79,13 @@ export const BackgroundMusicPlayer = forwardRef<BackgroundMusicPlayerHandle, Bac
 
   return (
     <div
-      className={`fixed bottom-4 right-4 z-50 flex items-center gap-3 rounded-2xl border border-[var(--border-soft)] bg-[linear-gradient(135deg,var(--teal-50),var(--purple-50))] px-3 py-2 shadow-lg backdrop-blur-sm transition-opacity duration-500 sm:bottom-6 sm:right-6 ${isVisible ? "opacity-100" : "pointer-events-none opacity-0"}`}
+      className={`fixed bottom-4 right-4 z-50 flex items-center gap-3 rounded-2xl border border-[var(--border-soft)] bg-[linear-gradient(135deg,var(--teal-50),var(--blue-50))] px-3 py-2 shadow-lg backdrop-blur-sm transition-opacity duration-500 sm:bottom-6 sm:right-6 ${isVisible ? "opacity-100" : "pointer-events-none opacity-0"}`}
     >
       <audio ref={audioRef} src={src} loop preload="none" />
       <button
         type="button"
         onClick={togglePlayback}
-        className="grid h-9 w-9 place-items-center rounded-full bg-[linear-gradient(135deg,var(--teal-700),var(--purple-700))] text-white transition hover:brightness-110"
+        className="grid h-9 w-9 place-items-center rounded-full bg-[linear-gradient(135deg,var(--teal-700),var(--blue-700))] text-white transition hover:brightness-110"
         aria-label={isPlaying ? "Pause background music" : "Play background music"}
       >
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -115,7 +115,7 @@ export const BackgroundMusicPlayer = forwardRef<BackgroundMusicPlayerHandle, Bac
         step={0.01}
         value={volume}
         onChange={(event) => handleVolumeChange(Number(event.target.value))}
-        className="h-1.5 w-20 cursor-pointer accent-[var(--purple-700)] sm:w-24"
+        className="h-1.5 w-20 cursor-pointer accent-[var(--blue-700)] sm:w-24"
         aria-label="Background music volume"
       />
     </div>

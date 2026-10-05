@@ -19,8 +19,6 @@ export function EnvelopeGate({ isOpening, onOpen, guestName }: EnvelopeGateProps
           <div className="envelope-back" />
           <div className="envelope-letter">
             <h2 className="envelope-letter-title">{guestName}</h2>
-            {/* <h2 className="envelope-letter-title">Azzalea & Aiman</h2> */}
-            <p className="envelope-letter-copy">You are warmly invited to our Nikah</p>
           </div>
           <div className="envelope-flap" />
         </div>
